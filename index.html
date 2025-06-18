@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;600&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/d1bffdbd7a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="./images/logo.png" class="logo" alt="logo" />
+          <ul id="sidemenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-x nav-close" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars nav-expand" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Full Stack Developer</p>
+          <h1>
+            Hi, I am <span>Surya</span> <br />Krishna Moorthy from Connecticut
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!----------------About------------------>
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img
+              src="./images/portfolio-sample.jpg"
+              alt="Surya's Profile Picture"
+            />
+          </div>
+          <section class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              consectetur cum id! Eum, modi. Consectetur, sed, quaerat laborum
+              distinctio illo pariatur delectus ea est architecto animi amet nam
+              officia at. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Vitae consectetur cum id! Eum, modi. Consectetur, sed,
+              quaerat laborum distinctio illo pariatur delectus ea est
+              architecto animi amet nam officia at.
+            </p>
+            <div class="tab-titles">
+              <p
+                class="tab-links active-link"
+                onclick="opentab(event, 'skills')"
+              >
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab(event,'experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab(event, 'education')">
+                Education
+              </p>
+            </div>
+            <!-- Experience -->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web development</span><br />Web app development</li>
+                <li>
+                  <span>Android/ios development</span><br />Mobile app
+                  development
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2018-2019</span><br />Full Stack Developer Intern at
+                  Seattle childrens, Seattle
+                </li>
+                <li>
+                  <span>2011-2015</span><br />Deputy Manager at ICICI Bank,
+                  India
+                </li>
+              </ul>
+            </div>
+            <!-- Education -->
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2018</span><br />Web Development Certification Galvanize
+                  Inc., Seattle, Washington
+                </li>
+                <li>
+                  <span>2017</span><br />Computer Information Systems Mission
+                  College, Santa Clara, California
+                </li>
+                <li>
+                  <span>2014</span><br />MBA in Banking and Finance Manipal
+                  University, Bangalore, India
+                </li>
+                <li>
+                  <span>2010</span><br />Bachelor of Technology in Electronics &
+                  Communication Mahatma Gandhi University, Kerala, India 2010
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!---------- services ---------->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code icon-large"></i>
+            <h2>Figma to React</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              fugit quos? Assumenda rerum ducimus ea id quos consequuntur quo
+              qui quisquam nemo iure! Similique dolorem delectus quasi, esse
+              voluptatem autem!
+            </p>
+            <a href="#">learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop-simple icon-large"></i>
+            <h2>Responsive Websites</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              fugit quos? Assumenda rerum ducimus ea id quos consequuntur quo
+              qui quisquam nemo iure! Similique dolorem delectus quasi, esse
+              voluptatem autem!
+            </p>
+            <a href="#">learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store icon-large"></i>
+            <h2>Single Page Web Apps</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              fugit quos? Assumenda rerum ducimus ea id quos consequuntur quo
+              qui quisquam nemo iure! Similique dolorem delectus quasi, esse
+              voluptatem autem!
+            </p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------- Portfolio ------------>
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img
+              src="./images/flicks-react_LE.jpg"
+              alt="Flicks react project"
+            />
+            <div class="layer">
+              <h3>Flicks React</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
+                quos recusandae autem laborum! autem laborum!
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/meet-app.png" alt="Meet app project" />
+            <div class="layer">
+              <h3>Meet</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
+                quos recusandae autem laborum!
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/flicks-react.png" alt="Flicks react project" />
+            <div class="layer">
+              <h3>Flicks Angular</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
+                quos recusandae autem laborum!
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!---------------Contact--------------->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+            <p><i class="fa-solid fa-phone"></i>+1 408-768-0549</p>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/suryakrishnamoorthy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a
+                href="https://x.com/SuryaKrishnaMo2"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a
+                href="https://github.com/SuryaKrishnaMoorthy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Github"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+            <a
+              href="./images/surya_krishnamoorthy.pdf"
+              download="Surya-Krishna-Moorthy-CV.pdf"
+              aria-label="Download Surya Krishnamoorthy's CV as PDF"
+              class="btn btn2"
+            >
+              Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form>
+              <input
+                type="text"
+                class="form-input"
+                name="Name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                class="form-input"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                class="form-input"
+                rows="6"
+                placeholder="Your Messsage"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>&copy; 2025 Surya Krishnamoorthy. All rights reserved.</p>
+      </footer>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
