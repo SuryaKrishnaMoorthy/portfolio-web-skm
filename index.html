@@ -24,14 +24,14 @@
         <nav>
           <img src="./images/logo.png" class="logo" alt="logo" />
           <ul id="sidemenu">
-            <li><a href="#">Home</a></li>
+            <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-x nav-close" onclick="closemenu()"></i>
+            <i class="fa-solid fa-x nav-close"></i>
           </ul>
-          <i class="fa-solid fa-bars nav-expand" onclick="openmenu()"></i>
+          <i class="fa-solid fa-bars nav-expand"></i>
         </nav>
         <div class="header-text">
           <p>Full Stack Developer</p>
@@ -48,22 +48,19 @@
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img
-              src="./images/portfolio-sample.jpg"
-              alt="Surya's Profile Picture"
-            />
+            <img src="./images/surya_pic.jpeg" alt="Surya's Profile Picture" />
           </div>
           <section class="about-col-2">
             <h1 class="sub-title">About me</h1>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              consectetur cum id! Eum, modi. Consectetur, sed, quaerat laborum
-              distinctio illo pariatur delectus ea est architecto animi amet nam
-              officia at. Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Vitae consectetur cum id! Eum, modi. Consectetur, sed,
-              quaerat laborum distinctio illo pariatur delectus ea est
-              architecto animi amet nam officia at.
+              Web developer with a strong focus on front-end frameworks like
+              React, Redux, and Angular, currently re-entering the workforce and
+              open to freelance opportunities. Skilled in building responsive,
+              user-centered applications using modern tools across the stack —
+              from HTML, CSS, and JavaScript to MongoDB, PostgreSQL, and AWS
+              Lambda. Passionate about clean code, thoughtful design, and
+              continuous learning.
             </p>
             <div class="tab-titles">
               <p
@@ -132,38 +129,70 @@
       <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
-          <div>
-            <i class="fa-solid fa-code icon-large"></i>
-            <h2>Figma to React</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              fugit quos? Assumenda rerum ducimus ea id quos consequuntur quo
-              qui quisquam nemo iure! Similique dolorem delectus quasi, esse
-              voluptatem autem!
-            </p>
-            <a href="#">learn more</a>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-front">
+                <i class="fa-solid fa-code icon-large"></i>
+                <h2>Figma to React</h2>
+                <p>
+                  Convert modern UI designs into fully functional, reusable
+                  React components with pixel-perfect precision.
+                </p>
+              </div>
+              <div class="card-back hidden">
+                <ul id="figma-details" class="details-list">
+                  <li>Pixel-perfect design-to-code conversion</li>
+                  <li>Reusable, modular component structure</li>
+                  <li>Responsive layout handling from designs</li>
+                  <li>
+                    Optional integration with UI libraries (e.g., Material UI)
+                  </li>
+                  <li>Clean, developer-friendly code</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div>
-            <i class="fa-solid fa-crop-simple icon-large"></i>
-            <h2>Responsive Websites</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              fugit quos? Assumenda rerum ducimus ea id quos consequuntur quo
-              qui quisquam nemo iure! Similique dolorem delectus quasi, esse
-              voluptatem autem!
-            </p>
-            <a href="#">learn more</a>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-front">
+                <i class="fa-solid fa-crop-simple icon-large"></i>
+                <h2>Responsive Websites</h2>
+                <p>
+                  Build websites that look great and work smoothly on all screen
+                  sizes — from desktops to phones.
+                </p>
+              </div>
+              <div class="card-back hidden">
+                <ul id="responsive-details" class="details-list">
+                  <li>Mobile-first development</li>
+                  <li>Responsive layouts using Flexbox/Grid</li>
+                  <li>Accessibility and semantic HTML</li>
+                  <li>Cross-browser and device testing</li>
+                  <li>Optimized loading and performance</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div>
-            <i class="fa-brands fa-app-store icon-large"></i>
-            <h2>Single Page Web Apps</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              fugit quos? Assumenda rerum ducimus ea id quos consequuntur quo
-              qui quisquam nemo iure! Similique dolorem delectus quasi, esse
-              voluptatem autem!
-            </p>
-            <a href="#">learn more</a>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-front">
+                <i class="fa-brands fa-app-store icon-large"></i>
+                <h2>Single Page Web Apps</h2>
+                <p>
+                  Fast and dynamic web apps that feel like native apps — built
+                  with modern frameworks and clean architecture.
+                </p>
+              </div>
+              <div class="card-back hidden">
+                <ul id="spa-details" class="details-list">
+                  <li>Built with React, Redux, React Router</li>
+                  <li>Dynamic content without page reloads</li>
+                  <li>Real-time updates and API integration</li>
+                  <li>Smooth transitions and UI animations</li>
+                  <li>Optimized performance (lazy loading, code splitting)</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -206,6 +235,43 @@
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
                 quos recusandae autem laborum!
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img
+              src="./images/figma-react-ui.png"
+              alt="Figma to React Card project"
+            />
+            <div class="layer">
+              <h3>Figma to React Card</h3>
+              <p>
+                This component was built from a real Figma file to demonstrate
+                my skills in translating design into accessible, responsive, and
+                component-based React UI using Tailwind CSS.
+              </p>
+              <a
+                href="https://figma-card-ui.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Figma to React Card Project"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work mobile">
+            <img
+              src="./images/chat-chit-mockup.gif"
+              alt="Chat-Chit mobile app project"
+            />
+            <div class="layer">
+              <h3>Chat-Chit</h3>
+              <p>
+                A mobile application for chat, where the users can send messages
+                to friends and family.Users can enter their name and choose a
+                background color for the chat screen before joining the chat.
+                Data gets stored online and offline.
               </p>
               <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
@@ -282,10 +348,10 @@
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <p>&copy; 2025 Surya Krishnamoorthy. All rights reserved.</p>
-      </footer>
     </div>
+    <footer class="footer">
+      <p>&copy; 2025 Surya Krishnamoorthy. All rights reserved.</p>
+    </footer>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
