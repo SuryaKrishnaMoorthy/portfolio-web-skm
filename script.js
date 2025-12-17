@@ -5,40 +5,62 @@ const openIcon = document.querySelector(".nav-expand");
 const closeIcon = document.querySelector(".nav-close");
 const toggleButtons = document.querySelectorAll(".toggle-button");
 
-function opentab(event, tabname) {
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove("active-link");
-    tabcontents[i].classList.remove("active-tab");
+let isMenuOpen = false;
+let lastScreenWidth = window.innerWidth;
 
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
+function openmenu() {
+  if (window.innerWidth < 700) {
+    sidemenu.style.right = "0";
+    isMenuOpen = true;
+  }
+}
+function closemenu() {
+  if (window.innerWidth < 700) {
+    sidemenu.style.right = "-100%";
+    isMenuOpen = false;
   }
 }
 
-function openmenu() {
-  sidemenu.style.right = 0;
-}
-
-function closemenu() {
-  sidemenu.style.right = "-100%";
-}
-
-openIcon.addEventListener("click", (event) => {
-  openmenu();
-});
-
-closeIcon.addEventListener("click", (event) => {
-  closemenu();
-});
-
+openIcon.addEventListener("click", openmenu);
+closeIcon.addEventListener("click", closemenu);
 document.addEventListener("click", function (event) {
-  console.log(event.target);
   const isClickInside =
     sidemenu.contains(event.target) || openIcon.contains(event.target);
 
-  if (!isClickInside) {
+  if (window.innerWidth < 700 && !isClickInside) {
     closemenu();
   }
+});
+
+const handleResize = () => {
+  const width = window.innerWidth;
+
+  // Moving to desktop
+  if (width >= 700 && lastScreenWidth < 700) {
+    sidemenu.style.right = "0";
+    sidemenu.style.display = "flex";
+    isMenuOpen = false;
+  }
+
+  //Moving to mobile
+  if (width <= 700 && lastScreenWidth > 700) {
+    sidemenu.style.display = "block";
+    sidemenu.style.right = "-100%"; //start closed
+    isMenuOpen = false;
+  }
+  lastScreenWidth = width;
+};
+window.addEventListener("resize", handleResize);
+window.addEventListener("load", handleResize);
+
+// Close the side menu when any menuitem is clicked on mobile.
+const menuLinks = sidemenu.querySelectorAll("a");
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth < 700) {
+      closemenu();
+    }
+  });
 });
 
 toggleButtons.forEach((btn) => {
@@ -58,3 +80,28 @@ toggleButtons.forEach((btn) => {
     button.setAttribute("aria-expanded", !isExpanded);
   });
 });
+
+function opentab(event, tabname) {
+  for (let i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active-link");
+    tabcontents[i].classList.remove("active-tab");
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+}
+
+// Ensure correct initial menu state on first load
+function initializeMenuState() {
+  if (window.innerWidth < 700) {
+    sidemenu.style.display = "block";
+    sidemenu.style.right = "-100%"; // start hidden
+    isMenuOpen = false;
+  } else {
+    sidemenu.style.display = "flex";
+    sidemenu.style.right = "0"; // desktop view
+    isMenuOpen = false;
+  }
+}
+
+initializeMenuState(); // run immediately on page load

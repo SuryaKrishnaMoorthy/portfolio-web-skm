@@ -1,1 +1,7 @@
-# portfolio-web-skm
+# portfolio-website
+
+### BUILT WITH
+
+- HTML
+- CSS
+- Javascript
